@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-1: oklch(0.162 0 0);
+  --color-2: oklch(0.195 0 0);
+  --color-3: oklch(0.254 0 0);
+  --color-4: oklch(0.302 0 0);
+  --color-5: oklch(0.348 0 0);
+  --color-6: oklch(0.396 0 0);
+  --color-7: oklch(0.459 0 0);
+  --color-8: oklch(0.549 0 0);
+  --color-9: oklch(0.649 0 0);
+  --color-10: oklch(0.72 0 0);
+  --color-11: oklch(0.863 0 0);
+  --color-12: oklch(0.933 0 0);
+}
+
+@theme {
+  /* Mapping to a beautiful, intuitive 'zen' scale (Light to Dark) */
+  --color-zen-50: var(--color-12);    /* oklch(0.933...) Perfect for subtle backgrounds */
+  --color-zen-100: var(--color-11);   /* oklch(0.863...) Card backgrounds / borders */
+  --color-zen-200: var(--color-10);   /* oklch(0.72...) Muted borders */
+  --color-zen-300: var(--color-9);    /* oklch(0.649...) */
+  --color-zen-400: var(--color-8);    /* oklch(0.549...) Secondary icons / placeholder text */
+  --color-zen-500: var(--color-7);    /* oklch(0.459...) Neutral midtone */
+  --color-zen-600: var(--color-6);    /* oklch(0.396...) */
+  --color-zen-700: var(--color-5);    /* oklch(0.348...) Muted body text */
+  --color-zen-800: var(--color-4);    /* oklch(0.302...) Regular body text */
+  --color-zen-900: var(--color-3);    /* oklch(0.254...) Deep charcoal headings */
+  --color-zen-950: var(--color-2);    /* oklch(0.195...) Midnight black */
+  --color-zen-ink: var(--color-1);    /* oklch(0.162...) Deepest abyss black */
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color-1);
+}
