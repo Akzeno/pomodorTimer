@@ -1,10 +1,31 @@
+import { useState } from "react";
 import "./App.css";
+import Modal from "./components/Modal";
 import Timer from "./components/Timer";
 
 function App() {
+  const timeGivenbyUser = {
+    usrTimeInSec: 10,
+    usrBeakTimeInSec: 5,
+  };
+
+  const [time, setTime] = useState(timeGivenbyUser.usrTimeInSec);
+  const [runnig, setRunning] = useState(false);
+  const [isBreakTime, setIsBreakTime] = useState(false);
+
+  
   return (
     <>
-      <Timer />
+      <Timer
+        time={time}
+        setTime={setTime}
+        runnig={runnig}
+        setRunning={setRunning}
+        isBreakTime={isBreakTime}
+        setIsBreakTime={setIsBreakTime}
+        timeGivenbyUser={timeGivenbyUser}
+      />
+      <Modal></Modal>
     </>
   );
 }
