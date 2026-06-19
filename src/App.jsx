@@ -13,7 +13,8 @@ function App() {
   const [runnig, setRunning] = useState(false);
   const [isBreakTime, setIsBreakTime] = useState(false);
 
-  
+  const [isClose, setIsClose] = useState(true);
+
   return (
     <>
       <Timer
@@ -23,9 +24,11 @@ function App() {
         setRunning={setRunning}
         isBreakTime={isBreakTime}
         setIsBreakTime={setIsBreakTime}
+        isClose={isClose}
+        setIsClose={setIsClose}
         timeGivenbyUser={timeGivenbyUser}
       />
-      <Modal></Modal>
+      <Modal isClose={isClose} setIsClose={setIsClose}></Modal>
     </>
   );
 }

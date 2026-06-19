@@ -9,6 +9,8 @@ const Timer = ({
   setRunning,
   isBreakTime,
   setIsBreakTime,
+  isClose,
+  setIsClose,
   timeGivenbyUser: { usrTimeInSec, usrBeakTimeInSec },
 }) => {
   const deadLine = useRef(null);
@@ -57,8 +59,10 @@ const Timer = ({
   };
 
   return (
-    <div className="flex h-screen items-center justify-center bg-zen-ink font-['Rubik'] text-[18vw] leading-none font-extrabold tracking-tighter text-neutral-600 select-none">
+    <div className="flex h-screen items-center justify-center bg-zen-ink font-['Rubik',_Arial,_sans-serif] text-[18vw] leading-none font-extrabold tracking-tighter text-neutral-600 select-none">
       <ShowTimeWraper
+        isClose={isClose}
+        setIsClose={setIsClose}
         setRunning={setRunning}
         runnig={runnig}
         handelReset={handelReset}
