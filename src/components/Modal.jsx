@@ -15,7 +15,7 @@ const Modal = ({ isClose, setIsClose }) => {
         onClick={(e) => e.stopPropagation()}
         className="flex px-[500px] py-[200px] items-center justify-center border-2 border-zen-900 rounded-2xl bg-zen-950 md:rounded-4xl"
       >
-        <ShowTimeSetter minutsOptionsNum={60} />
+        <ShowTimeSetter minutsOptionNum={60} />
       </div>
     </div>,
     document.getElementById("portal"),
